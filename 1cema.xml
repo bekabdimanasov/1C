@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MobileApp xmlns="http://v8.1c.ru/8.3/mobile-application/app" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:bsch="http://v8.1c.ru/8.2/data/bsl" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:chm="http://v8.1c.ru/8.2/data/chart" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:dl="http://v8.1c.ru/8.2/managed-application/dynamic-list" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:mf="http://v8.1c.ru/8.3/mobile-application/form" xmlns:mxl="http://v8.1c.ru/8.2/data/spreadsheet" xmlns:role="http://v8.1c.ru/8.2/roles" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Configuration" id="5f6373df-f47a-4fd5-b640-5488e14d71a6" formatVersion="1" containerID="b6b80f9d-4e6b-486d-b4a7-9859da25bf84" defaultLanguage="Language.English" scriptVariant="English">
+	<language name="English" id="63212b0e-962b-4f06-9016-86a489df77e7" languageCode="en">
+		<synonym>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>English</v8:content>
+			</v8:item>
+		</synonym>
+	</language>
+	<mainModule version="1" startAddr="0">
+		<bsch:cmdOpCode>22,22</bsch:cmdOpCode>
+		<bsch:cmdOperand>0,0</bsch:cmdOperand>
+	</mainModule>
+	<sessionModule version="1">
+		<bsch:cmdOpCode>22</bsch:cmdOpCode>
+		<bsch:cmdOperand>0</bsch:cmdOperand>
+	</sessionModule>
+	<startPageWorkingArea>
+		<workingAreaTemplate>OneColumn</workingAreaTemplate>
+		<column>
+			<form>CommonForm.Form</form>
+			<height>10</height>
+		</column>
+	</startPageWorkingArea>
+	<commonForm name="Form" id="d0543ca7-1817-4e0d-953b-887cdb520157">
+		<synonym>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Form</v8:content>
+			</v8:item>
+		</synonym>
+		<form>
+			<mf:serverModule version="1" startAddr="0">
+				<bsch:cmdOpCode>22,22</bsch:cmdOpCode>
+				<bsch:cmdOperand>0,0</bsch:cmdOperand>
+			</mf:serverModule>
+			<mf:clientModule version="1" startAddr="7">
+				<bsch:cmdOpCode>1,4,18,19,1,1,22,22,22</bsch:cmdOpCode>
+				<bsch:cmdOperand>4,0,1,1,4,5,0,0,0</bsch:cmdOperand>
+				<bsch:constant>SCalisiyor</bsch:constant>
+				<bsch:procedure name="Command1" parametersCount="1" startAddr="0">
+					<bsch:variable name="Command" isLocal="true" isParam="true"/>
+					<bsch:paramsDefValue/>
+				</bsch:procedure>
+				<bsch:procedure name="Message" isExternal="true" parametersCount="2" startAddr="0"/>
+			</mf:clientModule>
+			<mf:serverWOContextModule version="1">
+				<bsch:cmdOpCode>22</bsch:cmdOpCode>
+				<bsch:cmdOperand>0</bsch:cmdOperand>
+			</mf:serverWOContextModule>
+			<mf:clientServerWOContextModule version="1">
+				<bsch:cmdOpCode>22</bsch:cmdOpCode>
+				<bsch:cmdOperand>0</bsch:cmdOperand>
+			</mf:clientServerWOContextModule>
+			<mf:attributes>
+				<mf:attribute name="Attribute1">
+					<mf:title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>HIIIII</v8:content>
+						</v8:item>
+					</mf:title>
+					<mf:type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</mf:type>
+				</mf:attribute>
+			</mf:attributes>
+			<mf:command name="Command1">
+				<mf:handlerName>Command1</mf:handlerName>
+			</mf:command>
+			<mf:mainElement>
+				<mf:button name="Command1" type="UsualButton" commandName="Form.Command.Command1"/>
+				<mf:field name="Attribute1" kind="InputField" dataPath="Attribute1"/>
+			</mf:mainElement>
+		</form>
+		<useStandardCommands>false</useStandardCommands>
+	</commonForm>
+	<requiredPermission>
+		<permission>Multimedia</permission>
+		<use>true</use>
+	</requiredPermission>
+	<requiredPermission>
+		<permission>Location</permission>
+		<use>true</use>
+	</requiredPermission>
+	<requiredPermission>
+		<permission>Contacts</permission>
+		<use>true</use>
+	</requiredPermission>
+	<requiredPermission>
+		<permission>Calendars</permission>
+		<use>true</use>
+	</requiredPermission>
+	<requiredPermission>
+		<permission>Telephony</permission>
+		<use>true</use>
+	</requiredPermission>
+	<requiredPermission>
+		<permission>PushNotification</permission>
+		<use>true</use>
+	</requiredPermission>
+	<requiredPermission>
+		<permission>LocalNotification</permission>
+		<use>true</use>
+	</requiredPermission>
+	<requiredPermission>
+		<permission>Print</permission>
+		<use>true</use>
+	</requiredPermission>
+	<requiredPermission>
+		<permission>InAppPurchases</permission>
+		<use>true</use>
+	</requiredPermission>
+	<requiredPermission>
+		<permission>Ads</permission>
+		<use>true</use>
+	</requiredPermission>
+</MobileApp>
